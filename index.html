@@ -1,120 +1,183 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mgh Pulse Lab</title>
 
 <style>
 body {
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#0f172a;
-    color:white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
 }
 
+/* HEADER */
 header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-    background:#020617;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
 }
 
-header img {
-    height:50px;
+.logo {
+    height: 60px;
 }
 
-nav a {
-    color:#94a3b8;
-    margin:0 15px;
-    text-decoration:none;
+.contact {
+    cursor: pointer;
+    font-weight: bold;
+    color: #2e7d32;
 }
 
+.email {
+    display: none;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* HERO */
 .hero {
-    text-align:center;
-    padding:100px 20px;
+    background: url('pagge.png') center/cover no-repeat;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    color: white;
 }
 
 .hero h1 {
-    font-size:50px;
+    max-width: 500px;
 }
 
-.hero p {
-    color:#94a3b8;
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
+/* SECTIONS */
 .section {
-    padding:60px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .cards {
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    width:300px;
-    transition:0.3s;
+    background: white;
+    padding: 20px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* ABOUT */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    background: white;
+}
+
+.about-text {
+    max-width: 400px;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* INSIGHTS */
+.insights .card {
+    height: 120px;
+}
+
+/* HOVER */
 .card:hover {
-    transform:translateY(-5px);
-}
-
-footer {
-    text-align:center;
-    padding:20px;
-    background:#020617;
+    transform: translateY(-5px);
+    transition: 0.3s;
 }
 </style>
-</head>
 
+</head>
 <body>
 
+<!-- HEADER -->
 <header>
-    <img src="logo.png">
-    <nav>
-        <a href="#">Accueil</a>
-        <a href="#">Cours</a>
-        <a href="#">PDF</a>
-        <a href="#">Contact</a>
-    </nav>
+    <img src="logo.png" class="logo">
+    <div onclick="toggleEmail()" class="contact">
+        Contact
+        <div id="email" class="email">mghpulselab@gmail.com</div>
+    </div>
 </header>
 
-<section class="hero">
-    <h1>Mgh Pulse Lab ⚡</h1>
-    <p>Plateforme scientifique sur les énergies renouvelables</p>
-</section>
-
-<section class="section">
-    <h2>📚 Mes contenus</h2>
-    <div class="cards">
-
-        <div class="card">
-            <h3>📄 Cours</h3>
-            <p>Résumés et explications simples</p>
-        </div>
-
-        <div class="card">
-            <h3>📘 PDF</h3>
-            <p>Télécharger mes documents</p>
-        </div>
-
-        <div class="card">
-            <h3>🛠️ Projets</h3>
-            <p>Arduino, IoT, systèmes énergétiques</p>
-        </div>
-
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>Empowering Knowledge in Renewable Energy & Smart Solutions</h1>
+        <button class="btn">Learn More</button>
     </div>
-</section>
+</div>
 
-<footer>
-    <p>© 2026 Mgh Pulse Lab</p>
-</footer>
+<!-- FOCUS -->
+<div class="section">
+    <h2>Our Focus Areas</h2>
+    <div class="cards">
+        <div class="card">Energy Efficiency</div>
+        <div class="card">Renewable Energy</div>
+        <div class="card">Smart Grids & Storage</div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+    <div class="cards">
+        <div class="card">Certificate</div>
+        <div class="card">Conference</div>
+        <div class="card">Freelance</div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about">
+    <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+        Ingénieure en énergies renouvelables spécialisée en systèmes photovoltaïques et efficacité énergétique.<br><br>
+        Passionnée par la conception, la simulation et le développement de solutions énergétiques durables et innovantes.
+        </p>
+    </div>
+    <img src="111.png">
+</div>
+
+<!-- INSIGHTS -->
+<div class="section insights">
+    <h2>Latest Insights</h2>
+    <div class="cards">
+        <div class="card">Introduction à l’énergie solaire</div>
+        <div class="card">Optimisation énergétique</div>
+        <div class="card">Smart grids expliqués</div>
+    </div>
+</div>
+
+<script>
+function toggleEmail() {
+    var email = document.getElementById("email");
+    email.style.display = (email.style.display === "block") ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
