@@ -241,6 +241,16 @@ var allProducts = amazonFR.concat(amazonUS);
 // Choisir un lien aléatoire
 var randomLink = allProducts[Math.floor(Math.random() * allProducts.length)];
 
+var texts = [
+"Optimize your energy setup",
+"Recommended by energy engineers",
+"Improve your efficiency today"
+];
+
+var randomText = texts[Math.floor(Math.random() * texts.length)];
+
+document.getElementById("popupText").innerText = randomText;
+    
 // Détecter FR ou US
 var title = randomLink.includes("amzn.to/4") ? 
 "🇫🇷 Energy Tool (France)" : 
