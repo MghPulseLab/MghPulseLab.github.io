@@ -8,6 +8,13 @@
 <style>
 body { margin:0; font-family: Arial; }
 
+/* ton code existant */
+
+.hero h1 {
+    max-width: 500px;
+}
+</style>
+
 header {
     display:flex;
     justify-content:space-between;
@@ -47,16 +54,18 @@ td {
 }
 </style>
 </head>
-
+    
 <body>
 
 <header>
-    <img src="logo.png" class="logo">
+<img src="logo.png" class="logo">
 
-    <div>
-        <a href="index.html" style="margin-right:20px; text-decoration:none; color:black;">Home</a>
-        <span class="contact">Contact</span>
+<div onclick="toggleEmail()" class="contact">
+    Contact
+    <div id="email" style="display:none; font-size:14px;">
+        mghpulselab@gmail.com
     </div>
+</div>
 </header>
 
 <div class="hero">
@@ -234,5 +243,12 @@ td {
 
 </table>
 
+<script>
+function toggleEmail() {
+    var email = document.getElementById("email");
+    email.style.display = (email.style.display === "block") ? "none" : "block";
+}
+</script>
+    
 </body>
 </html>
