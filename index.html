@@ -169,5 +169,98 @@ function toggleEmail() {
 }
 </script>
 
+<!-- POPUP AMAZON -->
+<div id="popup" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+z-index:1000;
+">
+
+<div style="
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+width:300px;
+">
+
+<h3 id="popupTitle">Recommended Product</h3>
+
+<p id="popupText">Discover useful energy tools</p>
+
+<a id="popupLink" href="#" target="_blank">
+<button style="
+background:#2e7d32;
+color:white;
+padding:10px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+">
+View Product
+</button>
+</a>
+
+<br><br>
+
+<button onclick="closePopup()">Close</button>
+
+</div>
+</div>
+
+<script>
+
+// 🇫🇷 Amazon France
+var amazonFR = [
+"https://amzn.to/4lXjJ1Q",
+"https://amzn.to/4rZqxgR",
+"https://amzn.to/4dkjHPp",
+"https://amzn.to/4s4NE9M",
+"https://amzn.to/4uWqIMN"
+];
+
+// 🇺🇸 Amazon USA
+var amazonUS = [
+"https://amzn.to/4v04rh5",
+"https://amzn.to/3PH4yxR",
+"https://amzn.to/4dkmJ6o",
+"https://amzn.to/4bUHMdn",
+"https://amzn.to/3NAgIYR"
+];
+
+// Fusion des deux listes
+var allProducts = amazonFR.concat(amazonUS);
+
+// Choisir un lien aléatoire
+var randomLink = allProducts[Math.floor(Math.random() * allProducts.length)];
+
+// Détecter FR ou US
+var title = randomLink.includes("amzn.to/4") ? 
+"🇫🇷 Energy Tool (France)" : 
+"🇺🇸 Energy Tool (USA)";
+
+// Injecter dans le popup
+document.getElementById("popupLink").href = randomLink;
+document.getElementById("popupTitle").innerText = title;
+
+// afficher popup après 3 sec
+setTimeout(function(){
+document.getElementById("popup").style.display="flex";
+},3000);
+
+// fermer popup
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>    
+    
 </body>
 </html>
