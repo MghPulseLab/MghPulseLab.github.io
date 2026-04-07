@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renewable Energy</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
+
+header {
+    padding: 20px;
+    background: white;
+}
+
+.renewable-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1f4d3a, #2e7d32);
+    color: white;
+    text-align: center;
+}
+
+.renewable-hero h1 {
+    font-size: 40px;
+}
+
+.renewable-hero p {
+    opacity: 0.9;
+}
+
+.renewable-hero button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #d9c7a3;
+    font-weight: bold;
+}
+
+.renewable-cards {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.renew-card {
+    width: 220px;
+    height: 170px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.renew-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.back {
+    display: block;
+    margin: 20px;
+    text-decoration: none;
+    color: #2e7d32;
+}
+</style>
+
+</head>
+<body>
+
+<a href="index.html" class="back">⬅ Back</a>
+
+<div class="renewable-section">
+
+    <div class="renewable-hero">
+        <h1>Renewable Energy</h1>
+        <p>Smart tools, ebooks and professional resources</p>
+        <button>Explore Resources</button>
+    </div>
+
+    <div class="renewable-cards">
+
+        <div class="renew-card" onclick="location.href='ebooks.html'">
+            <div class="icon">📘</div>
+            <h3>E-books</h3>
+        </div>
+
+        <div class="renew-card" onclick="location.href='excel.html'">
+            <div class="icon">📊</div>
+            <h3>Excel Tools</h3>
+        </div>
+
+        <div class="renew-card" onclick="location.href='software.html'">
+            <div class="icon">⚙️</div>
+            <h3>Software Models</h3>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
