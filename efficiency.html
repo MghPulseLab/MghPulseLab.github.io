@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Efficiency</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+}
+
+.logo {
+    height: 80px;
+}
+
+/* BACK BUTTON */
+.back {
+    margin-left: 40px;
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* HERO PREMIUM */
+.efficiency-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1f4d3a, #2e7d32);
+    color: white;
+    text-align: center;
+}
+
+.efficiency-hero h1 {
+    font-size: 42px;
+}
+
+.efficiency-hero p {
+    opacity: 0.9;
+}
+
+.efficiency-hero button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #d9c7a3;
+    color: #1f4d3a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CARDS */
+.efficiency-cards {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.renew-card {
+    width: 230px;
+    height: 180px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    transition: 0.3s;
+}
+
+.renew-card:hover {
+    transform: translateY(-12px);
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <img src="logo.png" class="logo">
+</header>
+
+<a href="index.html" class="back">⬅ Back to Home</a>
+
+<!-- SECTION PREMIUM -->
+<div class="efficiency-section">
+
+    <div class="efficiency-hero">
+        <h1>Energy Efficiency</h1>
+        <p>Smart tools, ebooks and professional resources</p>
+    </div>
+
+    <div class="efficiency-cards">
+
+        <div class="renew-card" onclick="location.href='ebooks1.html'">
+            <div class="icon">📘</div>
+            <h3>E-books</h3>
+        </div>
+
+        <div class="renew-card" onclick="location.href='excel1.html'">
+            <div class="icon">📊</div>
+            <h3>Excel Tools</h3>
+        </div>
+
+        <div class="renew-card" onclick="location.href='software1.html'">
+            <div class="icon">⚙️</div>
+            <h3>Software Models</h3>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
