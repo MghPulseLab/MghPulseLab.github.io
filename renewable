@@ -94,17 +94,17 @@ header {
 
     <div class="renewable-cards">
 
-        <div class="renew-card" onclick="location.href='ebooks.html'">
+        <div class="renew-card" onclick="location.href='ebooks2.html'">
             <div class="icon">📘</div>
             <h3>E-books</h3>
         </div>
 
-        <div class="renew-card" onclick="location.href='excel.html'">
+        <div class="renew-card" onclick="location.href='excel2.html'">
             <div class="icon">📊</div>
             <h3>Excel Tools</h3>
         </div>
 
-        <div class="renew-card" onclick="location.href='software.html'">
+        <div class="renew-card" onclick="location.href='software2.html'">
             <div class="icon">⚙️</div>
             <h3>Software Models</h3>
         </div>
