@@ -61,17 +61,55 @@ header {
     border-radius: 5px;
 }
 
-#renewable {
-    background: linear-gradient(135deg, #1f4d3a, #6aa67a);
+.renewable-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1f4d3a, #2e7d32);
     color: white;
-    border-radius: 20px;
-    margin: 40px;
+    text-align: center;
 }
 
-#renewable .card {
+.renewable-hero h1 {
+    font-size: 36px;
+}
+
+.renewable-hero button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #d9c7a3;
+    color: #1f4d3a;
+    font-weight: bold;
+}
+
+.renewable-cards {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.renew-card {
+    width: 220px;
+    height: 160px;
     background: rgba(255,255,255,0.1);
-    color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
     backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.renew-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
 }
     
 /* SECTIONS */
